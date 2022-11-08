@@ -1,6 +1,9 @@
 ## LATERAL JOIN (CROSS APPLY OR OUTER APPLY)
+Soon...
 
-## SELECT with VALUES clause
+##VALUES clause
+
+### SELECT with VALUES clause
 ```
 SELECT
    FirstName,
@@ -13,7 +16,8 @@ FROM
    ) AS Idiots(IdiotId, FirstName, LastName)
 WHERE IdiotId = 2;
 ```
-### With CTE alternative
+
+#### With CTE alternative
 ```
 with parms (tag) as (
   values ('tag1'), ('tag2'), ('tag3')
@@ -24,7 +28,7 @@ from the_table t
 ```
 
 
-VALUES with a MERGE statement
+### VALUES with a MERGE statement
 ```
 DECLARE @Changes TABLE(Change VARCHAR(20));
 
