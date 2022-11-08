@@ -46,3 +46,11 @@ SELECT Change, COUNT(*) AS Count
 FROM @Changes  
 GROUP BY Change;
 ```
+
+## Convert delimited list to rows and query with JOIN TABLE
+```
+SELECT t.col 
+FROM   table t
+JOIN   TABLE(SELECT column_value 
+             FROM   sys.dbms_debug_vc2coll(:values)) c on t.col = c.column_value;
+```
