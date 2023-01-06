@@ -1,3 +1,18 @@
+## TRANSACTION SCRIPT
+```
+USE databaseNameHere
+GO
+
+BEGIN TRAN
+    DELETE FROM [...]
+    
+    IF @@ERROR != 0
+    BEGIN
+        ROLLBACK TRAN
+    END
+COMMIT TRAN
+```
+
 ## LATERAL JOIN (CROSS APPLY OR OUTER APPLY)
 Soon...
 
